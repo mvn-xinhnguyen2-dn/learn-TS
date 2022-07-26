@@ -1,0 +1,72 @@
+// === Font === //
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,350;0,400;0,500;0,700;1,600&display=swap');
+$font-body: 'Rubik', 'Helvetica Neue', Helvetica, Arial, sans-serif;;
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://dsathemes.com/html/olmo_1.4/files/css/flaticon.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css');
+
+// === Font Weight === //
+$font-weight: (
+  light: 350,
+  normal: 400,
+  medium: 500,
+  semiBold: 600,
+  bold: 700
+);
+
+// == Breakpoints === //
+$breakpoints: (
+  small: 480px,
+  medium: 768px,
+  wide: 960px,
+  large: 1024px,
+  largest: 1280px
+);
+
+// === Colors === //
+$colors: (
+  primary: #2c3e50,
+  white: #fff,
+  black: #111,
+  txt-black: #333,
+  txt-gray-dark: #666,
+  txt-gray: #6c757d,
+  border-black: #333,
+  border-gray: #e4e4e4,
+  border-blue: #0195ff,
+  border-gray-light: #f1f1f1,
+  bg-gray: #f4f4f9,
+  bg-blue: #0195ff,
+  bg-gray-light: #f7f7f7,
+  brand-html: #f2652a,
+  brand-css: #379ad7,
+  brand-js: #f1da4e,
+  brand-scss: #be5f8b,
+  brand-nodejs: #7cbe42
+);
+
+// === z-index === //
+$zindexs: (
+  dropdown: 1000,
+  sticky: 1020,
+  fixed: 1030,
+  modal-backdrop: 1040,
+  modal: 1050,
+  popover: 1060,
+  tooltip: 1070
+);
+
+// === Typography === //
+$font-size-base: 1rem !default; // 16px
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * .875 !default;
+
+$h-font-size: (
+  h1: $font-size-base * 4.0625,
+  h2: $font-size-base * 3.375,
+  h3: $font-size-base * 2.875,
+  h4: $font-size-base * 1.375,
+  h5: $font-size-base * 0.975,
+  h6: $font-size-base * 1.25,
+);

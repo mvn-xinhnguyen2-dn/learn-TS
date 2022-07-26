@@ -1,0 +1,45 @@
+.page-header {
+  text-align: center;
+  z-index: map-get($zindexs, fixed);
+  width: 100%;
+  display: block;
+  position: fixed;
+  right: 0;
+  left: 0;
+  transition: all 450ms ease-in-out;
+
+  .header-wrap {
+    @include pxRem(padding, 35 0);
+    transition: all 450ms ease-in-out;
+    .header {
+      @include pxRem(max-width, 1110);
+      
+      // margin: 0 auto;
+      margin: 1px auto;
+      justify-content: space-between;
+      align-items: center;
+      &-logo-img {
+        @include pxRem(max-height, 38)
+      }
+      &-nav {
+        &-list {
+          align-items: center;
+        }
+        &-item {
+          @include pxRem(font-size, 17);
+          @include pxRem(padding, 5 15);
+          font-weight: map-get($font-weight, medium);
+          
+          &:last-child {
+            @include pxRem(margin,0 12);
+          }
+        }
+      }
+    }
+  }
+  .header-wrap.scroller {
+    @include pxRem(padding,14 0);
+    background-color: white;
+    box-shadow: 0 2px 3px rgb(96 96 96 / 10%);
+  }
+}

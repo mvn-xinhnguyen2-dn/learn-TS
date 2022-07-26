@@ -1,0 +1,81 @@
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  @include pxRem("padding", 0 20);
+  @include pxRem("height", 54);
+  @include pxRem(font-size, 18);
+  @include pxRem(border-radius, 5);
+
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 5%);
+  border: none;
+  color: map-get($colors, txt-gray-dark);
+  background: map-get($colors, white);
+  font-weight: map-get($font-weight, normal);
+  outline: none;
+  transition: border-color 0.4s;
+  display: block;
+  -webkit-appearance: none;
+  transition: border-color 0.4s, box-shadow 0.4s;
+  &:disabled,
+  &.disabled {
+    background: map-get($colors, bg-gray-light);
+    // border-color: map-get($colors, bg-gray-light);
+    color: map-get($colors, txt-disabled);
+  }
+  &::placeholder {
+    color: map-get($colors, txt-disabled);
+  }
+  &[readonly] {
+    border-color: map-get($colors, border-gray);
+    box-shadow: none;
+  }
+}
+
+// Remove icon eye in Edge
+input {
+  &::-ms-clear,
+  &::-ms-reveal {
+    display: none;
+  }
+}
+
+// Prevent resize horizontal
+textarea {
+  resize: vertical;
+}
+
+// Label
+label {
+  @include pxRem(margin-bottom, 5);
+  display: block;
+}
+
+button[type="submit"] {
+  @include pxRem("padding", 13 40);
+  @include pxRem("height", 54);
+  @include pxRem("font-size", 18);
+  @include pxRem("margin", 0 20 0 15);
+  border: 1px solid transparent;
+  font-family: inherit;
+  font-weight: map-get($font-weight, medium)
+
+}
+
+// Group form control
+.form-group {
+  @include pxRem(margin-bottom, 20);
+}
+
+.form-mail {
+  @include pxRem(margin-top, 45);
+  input[type="text"] {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+  }
+}

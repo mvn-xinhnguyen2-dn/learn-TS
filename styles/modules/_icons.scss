@@ -1,0 +1,12 @@
+.header-icon-down {
+  font-size: 12px;
+  margin-left: 3px;
+}
+.fbox-icon {
+  @include pxRem(font-size, 70);
+  color: map-get($colors, bg-blue);
+}
+.product-icon {
+  @include pxRem(font-size, 65);
+  color: map-get($colors, bg-blue);
+}
