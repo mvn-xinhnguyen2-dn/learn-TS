@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import Image from "next/image";
 import Title from "../Title/index";
 
 const Stories = () => {
@@ -98,7 +99,10 @@ const Stories = () => {
                     <p>{item.text}</p>
                   </div>
                   <div className="stories-slides-author mt-25 flex">
-                    <img className="stories-slides-author-avt" src={item.avt} />
+                    <div className="stories-slides-author-avt">
+
+                    <Image src={item.avt}  layout="fill" objectFit="contain"/>
+                    </div>
                     <div className="stories-slides-author-info pl-15">
                       <h6 className="stories-slides-author-name">{item.username}</h6>
                       <p className="stories-slides-author-job">{item.job}</p>

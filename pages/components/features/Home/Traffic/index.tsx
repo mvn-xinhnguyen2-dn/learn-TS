@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const trafficData = [
   {
@@ -25,7 +26,7 @@ const Traffic = () => {
       <div className="mission container">
         <div className="mission-detail mb-0 flex">
           <div className="mission-detail-img col-6 p-0 pr-30">
-            <img src="https://dsathemes.com/html/olmo_1.4/files/images/seo-02.png"></img>
+            <Image src="https://dsathemes.com/html/olmo_1.4/files/images/seo-02.png" width="100%" height="100%" layout="responsive" objectFit="contain" />
           </div>
           <div className="mission-detail-content col-6 pl-30">
             <h4 className="title-h4 mb-20">

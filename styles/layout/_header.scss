@@ -13,13 +13,13 @@
     transition: all 450ms ease-in-out;
     .header {
       @include pxRem(max-width, 1110);
-      
-      // margin: 0 auto;
       margin: 1px auto;
       justify-content: space-between;
       align-items: center;
-      &-logo-img {
-        @include pxRem(max-height, 38)
+      &-logo {
+        position: relative;
+        @include pxRem(height,34);
+        @include pxRem(width,138.38);
       }
       &-nav {
         &-list {

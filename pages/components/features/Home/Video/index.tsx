@@ -1,5 +1,6 @@
 import React from "react";
 import { FaPlay } from "react-icons/fa";
+import Image from "next/image";
 
 const Video = () => {
   return (
@@ -11,8 +12,10 @@ const Video = () => {
             Our SEO services will help you to dominate the search engines
           </h3>
         </div>
-        <div className="video-img center">
-          <img src="https://dsathemes.com/html/olmo_1.4/files/images/seo-07.png" />
+        <div className="video-img">
+          <div className="video-image">
+            <Image src="https://dsathemes.com/html/olmo_1.4/files/images/seo-07.png" layout="fill" objectFit="contain"/>
+          </div>
           <div className="video-button">
             <FaPlay />
           </div>

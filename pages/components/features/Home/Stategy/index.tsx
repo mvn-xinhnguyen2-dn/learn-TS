@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Image from "next/image";
 import Title from "../Title/index";
 interface TitleContent {
   title: string;
@@ -10,13 +11,37 @@ const titleContent: TitleContent = {
 };
 
 const Stategy = () => {
+  function animateValue(obj:HTMLElement|null, start:number, end:number, duration:number) {
+    let startTimestamp:null|number = null;
+    const step = (timestamp:number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      obj!!.innerHTML = Math.floor(progress * (end - start) + start)
+        .toLocaleString("en-US")
+        .replace(",", ".");
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
+
+  try {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 3000 && window.scrollY < 3100) {
+        const obj_value = document.getElementById("couter-num");
+        animateValue(obj_value, 300, 784, 5000);
+      }
+    });
+  } catch (err) {}
+
   return (
     <section className="section-stategy">
       <div className="stategy container">
         <Title title={titleContent.title} text={titleContent.text} />
-        <div className="stategy-detail pb-50 flex">
+        <div className="mission-detail stategy-detail pb-50 flex">
           <div className="stategy-detail-img col-6">
-            <img src="https://dsathemes.com/html/olmo_1.4/files/images/seo-03.png"></img>
+            <Image src="https://dsathemes.com/html/olmo_1.4/files/images/seo-03.png" width="100%" height="100%" layout="responsive" objectFit="contain"/>
           </div>
           <div className="stategy-detail-content col-6">
             <h5 className="title-h5">DIGITAL STRATEGY</h5>
@@ -36,7 +61,7 @@ const Stategy = () => {
             </p>
           </div>
         </div>
-        <div className="stategy-detail flex">
+        <div className="mission-detail stategy-detail flex">
           <div className="stategy-detail-content pl-5 col-6">
             <h4 className="title-h4 mb-20">All-in-One Marketing Solutions</h4>
             <p className="text">
@@ -63,7 +88,10 @@ const Stategy = () => {
             <div className="stategy-detail-static-wrap">
               <div className="stategy-detail-static-top">
                 <p className="mb-10">New Customers</p>
-                <h1 className="title-h1">+784</h1>
+                <h1 className="title-h1">
+                  <span>+</span>
+                  <span id="couter-num">784</span>
+                </h1>
                 <p className="mt-5">
                   <span className="txt-blue">4.6%</span>
                   <span> vs last 7 days</span>
@@ -83,10 +111,10 @@ const Stategy = () => {
               </div>
             </div>
             <div className="bg-shape1">
-              <img src="https://dsathemes.com/html/olmo_1.4/files/images/bg-shape-1.png" />
+              <Image src="https://dsathemes.com/html/olmo_1.4/files/images/bg-shape-1.png" width="100%" height="100%" layout="responsive" objectFit="contain"/>
             </div>
             <div className="bg-shape2">
-              <img src="https://dsathemes.com/html/olmo_1.4/files/images/bg-shape-2.png" />
+              <Image src="https://dsathemes.com/html/olmo_1.4/files/images/bg-shape-2.png" width="100%" height="100%" layout="responsive" objectFit="contain"/>
             </div>
           </div>
         </div>
