@@ -1,7 +1,7 @@
 import "../styles/styles.scss";
 import Head from "next/head";
 import type { AppProps } from "next/app";
-import Header from './components/layout/Header/index';
+import Header from "./components/layout/Header/index";
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
