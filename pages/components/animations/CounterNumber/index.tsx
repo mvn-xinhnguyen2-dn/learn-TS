@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const CounterNumber = () => {
-  const [over1, setOvered] = useState(true);
+  let over1 = true;
   let over2 = true;
   function animateValue(
     obj: HTMLElement | null,
@@ -35,26 +35,24 @@ const CounterNumber = () => {
   try {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 3000 && window.scrollY < 3100) {
-        //&&
-        // !!over1 &&{
-        console.error(over2);
-
         const obj_value = document.getElementById("couter-num");
-        if (over1 && over2) {
-          animateValue(obj_value, 300, 784, 5000);
-          setOvered(false);
-          over2 = false;
+        if (over1) {
+          animateValue(obj_value, 300, 784, 3000);
+          over1 = false;
         }
-        // }
       }
       if (window.scrollY > 6890 && window.scrollY < 6900) {
-        const obj_values = document.querySelectorAll(
+        const obj_values: any = document.querySelectorAll(
           ".traffic-number-item"
-        ) as HTMLCollection<HTMLElement>;
+        );
+        // as HTMLCollection<NodeElement>;
 
-        animateValue(obj_values[0], 0, 65, 4000);
-        animateValue(obj_values[1], 0, 54, 4000);
-        animateValue(obj_values[2], 0, 4.86, 4000);
+        if (over2) {
+          animateValue(obj_values[0], 0, 65, 3000);
+          animateValue(obj_values[1], 0, 54, 3000);
+          animateValue(obj_values[2], 0, 4.86, 3000);
+          over2 = false;
+        }
       }
     });
   } catch (err) {}

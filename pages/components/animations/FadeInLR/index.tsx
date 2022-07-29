@@ -3,7 +3,8 @@ import React, {useEffect} from 'react'
 const FadeInLR = () => {
   useEffect(() => {
     window.addEventListener("scroll", () => {
-        const domSection = document.querySelectorAll(".mission-detail") as HTMLCollection<HTMLElement>;
+        const domSection:any = document.querySelectorAll(".mission-detail") ;
+        //as HTMLCollection<HTMLElement>;
         const animationDomSection = (i:number): void => {
           domSection[i].firstElementChild.style.animation = "fade-in-right 2s cubic-bezier(.39,.575,.565,1.000) both"
           domSection[i].firstElementChild.style.visibility = "visible"
