@@ -26,7 +26,7 @@ const Traffic = () => {
       <div className="mission container">
         <div className="mission-detail mb-0 flex">
           <div className="mission-detail-img col-6 p-0 pr-30">
-            <Image src="https://dsathemes.com/html/olmo_1.4/files/images/seo-02.png" width="100%" height="100%" layout="responsive" objectFit="contain" />
+            <Image src="https://dsathemes.com/html/olmo_1.4/files/images/seo-02.png" alt="banner image" width="100%" height="100%" layout="responsive" objectFit="contain" />
           </div>
           <div className="mission-detail-content col-6 pl-30">
             <h4 className="title-h4 mb-20">
@@ -58,7 +58,7 @@ const Traffic = () => {
             let items=<></>
             items = (
               <li className="traffic-item col-4 flex">
-                <h2 className="traffic-number">{item.num}{item.unit}</h2>
+                <h2 className="traffic-number"><span className="traffic-number-item">{item.num}</span>{item.unit}</h2>
                 <h5 className="title-h5">{item.text}</h5>
               </li>
             )

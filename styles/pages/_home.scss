@@ -430,21 +430,23 @@
         justify-content: space-between;
       }
       &-item {
-        @include pxRem(padding-right, 20);
+        // @include pxRem(padding-right, 20);
         align-items: center;
         .title-h5 {
           @include pxRem(font-size, 18);
           @include pxRem(margin-bottom, 0);
-          @include pxRem(padding-left, 25);
+          // @include pxRem(padding-left, 25);
+          width: 65%;
           line-height: 1.4;
           font-weight: map-get($font-weight, normal);
           color: #757575;
         }
       }
       &-number {
-        @include pxRem(padding-right, 40);
+        // @include pxRem(padding-right, 40);
         @include pxRem(font-size, 56);
         line-height: 1;
+        width: 35%;
       }
     }
   }

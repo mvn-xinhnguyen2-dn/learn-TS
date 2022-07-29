@@ -14,7 +14,7 @@ const Video = () => {
         </div>
         <div className="video-img">
           <div className="video-image">
-            <Image src="https://dsathemes.com/html/olmo_1.4/files/images/seo-07.png" layout="fill" objectFit="contain"/>
+            <Image src="https://dsathemes.com/html/olmo_1.4/files/images/seo-07.png" alt="banner image" layout="fill" objectFit="contain"/>
           </div>
           <div className="video-button">
             <FaPlay />

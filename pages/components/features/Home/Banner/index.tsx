@@ -7,7 +7,7 @@ const Banner = () => {
     <section className="section-banner">
       <div className="banner container flex">
         <div className="banner-img col-6">
-          <Image src="https://dsathemes.com/html/olmo_1.4/files/images/hero-8-img.png" width="100%" height="100%" layout="responsive" objectFit="contain" />
+          <Image src="https://dsathemes.com/html/olmo_1.4/files/images/hero-8-img.png" alt="banner image" width="100%" height="100%" layout="responsive" objectFit="contain" />
         </div>
         <div className="banner-content col-6">
           <h2 className="title-h2 pb-30">

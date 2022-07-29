@@ -101,7 +101,7 @@ const Stories = () => {
                   <div className="stories-slides-author mt-25 flex">
                     <div className="stories-slides-author-avt">
 
-                    <Image src={item.avt}  layout="fill" objectFit="contain"/>
+                    <Image src={item.avt} alt="banner image"  layout="fill" objectFit="contain"/>
                     </div>
                     <div className="stories-slides-author-info pl-15">
                       <h6 className="stories-slides-author-name">{item.username}</h6>

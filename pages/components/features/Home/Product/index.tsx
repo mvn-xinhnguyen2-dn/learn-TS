@@ -34,22 +34,6 @@ const productList: ProductList[] = [
 ];
 
 const Product = () => {
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      const domSection = document.querySelectorAll(
-        ".product-item"
-      ) as HTMLCollection<HTMLElement>;
-      console.log(window.scrollY);
-      if (window.scrollY > 3000) {
-        domSection!!.forEach((item: HTMLElement) => {
-          item.style.animation =
-            "fade-in-bottom 2s cubic-bezier(.39,.575,.565,1.000) both";
-          item.style.visibility = "visible";
-        });
-      }
-    });
-    // return () => window.removeEventListener("scroll", null);
-  }, []);
   return (
     <section className="section-product">
       <div className="product container">

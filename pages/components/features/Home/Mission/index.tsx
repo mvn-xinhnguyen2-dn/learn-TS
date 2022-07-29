@@ -8,37 +8,7 @@ const titleContent = {
 };
 
 const Mission = () => {
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-        const domSection = document.querySelectorAll(".mission-detail") as HTMLCollection<HTMLElement>;
-        const animationDomSection = (i:number): void => {
-          domSection[i].firstElementChild.style.animation = "fade-in-right 2s cubic-bezier(.39,.575,.565,1.000) both"
-          domSection[i].firstElementChild.style.visibility = "visible"
-          domSection[i].lastElementChild.style.animation = "fade-in-left 2s cubic-bezier(.39,.575,.565,1.000) both"
-          domSection[i].lastElementChild.style.visibility = "visible"
-        }
-        switch (true) {
-          case (window.scrollY > 5850 ):
-            animationDomSection(5)
-            break;
-          case (window.scrollY > 4200):
-            animationDomSection(4)
-            break;
-          case (window.scrollY > 3600):
-            animationDomSection(3)
-            break;
-          case (window.scrollY > 2400):
-            animationDomSection(2);
-            break;
-          case (window.scrollY > 1700):
-            animationDomSection(1)
-            break;
-          case (window.scrollY > 830):
-            animationDomSection(0)
-            break;
-        }
-    });
-  }, []);
+  
   return (
     <section className="section-mission">
       <div className="mission container">
@@ -64,12 +34,12 @@ const Mission = () => {
             </ul>
           </div>
           <div className="mission-detail-img col-7">
-            <Image src="https://dsathemes.com/html/olmo_1.4/files/images/seo-06.png" width="100%" height="100%" layout="responsive" objectFit="cover"/>
+            <Image src="https://dsathemes.com/html/olmo_1.4/files/images/seo-06.png" alt="banner image" width="100%" height="100%" layout="responsive" objectFit="cover"/>
           </div>
         </div>
         <div className="mission-detail flex">
           <div className="mission-detail-img col-6 p-0 pr-30">
-            <Image src="https://dsathemes.com/html/olmo_1.4/files/images/seo-01.png" width="100%" height="100%" layout="responsive" objectFit="cover"/>
+            <Image src="https://dsathemes.com/html/olmo_1.4/files/images/seo-01.png" alt="banner image" width="100%" height="100%" layout="responsive" objectFit="cover"/>
           </div>
           <div className="mission-detail-content col-6 pl-30">
             <h4 className="title-h4 mb-20">
@@ -110,7 +80,7 @@ const Mission = () => {
             </ul>
           </div>
           <div className="mission-detail-img col-6">
-            <Image src="https://dsathemes.com/html/olmo_1.4/files/images/seo-04.png" width="100%" height="100%" layout="responsive" objectFit="cover"/>
+            <Image src="https://dsathemes.com/html/olmo_1.4/files/images/seo-04.png" alt="banner image" width="100%" height="100%" layout="responsive" objectFit="cover"/>
           </div>
         </div>
       </div>
