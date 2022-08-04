@@ -3,8 +3,11 @@ import React, { useEffect } from "react";
 const FadeInLR = () => {
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      const domSection: any = document.querySelectorAll(".mission-detail");
-      //as HTMLCollection<HTMLElement>;
+      const domSectionBanner = document.querySelector(
+        ".section-banner"
+      ) as HTMLScriptElement;
+        
+      const domSection:any = document.querySelectorAll(".mission-detail") as NodeListOf<HTMLScriptElement>;
       const animationDomSection = (i: number): void => {
         domSection[i].firstElementChild.style.animation =
           "fade-in-right 2s cubic-bezier(.39,.575,.565,1.000) both";

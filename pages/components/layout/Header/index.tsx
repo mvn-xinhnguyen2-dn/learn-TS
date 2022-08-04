@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaCaretDown } from "react-icons/fa";
+import { IoReorderThree } from "react-icons/io5";
 
 const Header = () => {
   const headerRef = React.useRef<HTMLDivElement>(null);
@@ -95,6 +96,9 @@ const Header = () => {
                   <a className="btn">Let&#39;s Started</a>
                 </Link>
               </nav>
+              <div className="header-nav-icon">
+                <IoReorderThree />
+              </div>
             </div>
           </div>
         </div>

@@ -79,3 +79,13 @@ button[type="submit"] {
     width: 1%;
   }
 }
+
+@include respond-between(large, largest) {
+  button[type="submit"] {
+    @include pxRem("margin", 0 0 0 15);
+    @include pxRem("padding", 13 32);
+  }
+  .form-mail {
+    @include pxRem("margin-top", 16);
+  }
+}

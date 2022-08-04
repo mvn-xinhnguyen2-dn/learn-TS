@@ -7,13 +7,13 @@ const Banner = () => {
     <section className="section-banner">
       <div className="banner container flex">
         <div className="banner-img col-6">
-          <Image src="https://dsathemes.com/html/olmo_1.4/files/images/hero-8-img.png" alt="banner image" width="100%" height="100%" layout="responsive" objectFit="contain" />
+          <Image src="https://dsathemes.com/html/olmo_1.4/files/images/hero-8-img.png" alt="banner image" layout="fill" objectFit="contain" />
         </div>
         <div className="banner-content col-6">
           <h2 className="title-h2 pb-30">
             Generating leads with social media marketing
           </h2>
-          <p className="text">
+          <p className="text pr-10">
             Feugiat primis ligula risus auctor egestas and augue viverra mauri
             tortor in iaculis magna feugiat mauris ipsum and placerat viverra
             tortor gravida purus

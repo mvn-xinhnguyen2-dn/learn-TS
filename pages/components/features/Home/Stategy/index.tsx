@@ -17,7 +17,7 @@ const Stategy = () => {
         <Title title={titleContent.title} text={titleContent.text} />
         <div className="mission-detail stategy-detail pb-50 flex">
           <div className="stategy-detail-img col-6">
-            <Image src="https://dsathemes.com/html/olmo_1.4/files/images/seo-03.png" alt="banner image" width="100%" height="100%" layout="responsive" objectFit="contain"/>
+            <Image src="https://dsathemes.com/html/olmo_1.4/files/images/seo-03.png" alt="banner image" layout="fill" objectFit="contain"/>
           </div>
           <div className="stategy-detail-content col-6">
             <h5 className="title-h5">DIGITAL STRATEGY</h5>
@@ -87,10 +87,10 @@ const Stategy = () => {
               </div>
             </div>
             <div className="bg-shape1">
-              <Image src="https://dsathemes.com/html/olmo_1.4/files/images/bg-shape-1.png" alt="banner image" width="100%" height="100%" layout="responsive" objectFit="contain"/>
+              <Image src="https://dsathemes.com/html/olmo_1.4/files/images/bg-shape-1.png" alt="banner image" layout="fill" objectFit="contain"/>
             </div>
             <div className="bg-shape2">
-              <Image src="https://dsathemes.com/html/olmo_1.4/files/images/bg-shape-2.png" alt="banner image" width="100%" height="100%" layout="responsive" objectFit="contain"/>
+              <Image src="https://dsathemes.com/html/olmo_1.4/files/images/bg-shape-2.png" alt="banner image" layout="fill" objectFit="contain"/>
             </div>
           </div>
         </div>

@@ -34,18 +34,17 @@ const CounterNumber = () => {
 
   try {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 3000 && window.scrollY < 3100) {
+      if (window.scrollY > 3000) {
         const obj_value = document.getElementById("couter-num");
         if (over1) {
-          animateValue(obj_value, 300, 784, 3000);
+          animateValue(obj_value, 300, 784, 5000);
           over1 = false;
         }
       }
-      if (window.scrollY > 6890 && window.scrollY < 6900) {
+      if (window.scrollY > 6890) {
         const obj_values: any = document.querySelectorAll(
           ".traffic-number-item"
-        );
-        // as HTMLCollection<NodeElement>;
+        ) as NodeListOf<HTMLScriptElement>;
 
         if (over2) {
           animateValue(obj_values[0], 0, 65, 3000);

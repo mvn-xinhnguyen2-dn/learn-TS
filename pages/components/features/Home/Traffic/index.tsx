@@ -57,7 +57,7 @@ const Traffic = () => {
           trafficData.map((item) => {
             let items=<></>
             items = (
-              <li className="traffic-item col-4 flex">
+              <li className="traffic-item col-4 flex" key={item.num} >
                 <h2 className="traffic-number"><span className="traffic-number-item">{item.num}</span>{item.unit}</h2>
                 <h5 className="title-h5">{item.text}</h5>
               </li>
